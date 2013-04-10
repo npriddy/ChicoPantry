@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper
+END
+TPropertyAccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TPropertyAccess.php
+END
+TSqlMapTypeHandlerRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TSqlMapTypeHandlerRegistry.php
+END
+TSqlMapPagedList.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TSqlMapPagedList.php
+END
+TLazyLoadList.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TLazyLoadList.php
+END
+messages.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/messages.txt
+END
+TSqlMapException.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TSqlMapException.php
+END
+TSqlMapCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/DataMapper/TSqlMapCache.php
+END

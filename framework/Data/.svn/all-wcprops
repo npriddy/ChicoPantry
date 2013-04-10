@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data
+END
+TDbConnection.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/TDbConnection.php
+END
+TDbTransaction.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/TDbTransaction.php
+END
+TDataSourceConfig.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/TDataSourceConfig.php
+END
+TDbDataReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/TDbDataReader.php
+END
+TDbCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/TDbCommand.php
+END

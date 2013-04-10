@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements
+END
+TPreparedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TPreparedStatement.php
+END
+TStaticSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TStaticSql.php
+END
+TMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TMappedStatement.php
+END
+TSelectMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TSelectMappedStatement.php
+END
+TDeleteMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TDeleteMappedStatement.php
+END
+TSimpleDynamicSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TSimpleDynamicSql.php
+END
+TUpdateMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TUpdateMappedStatement.php
+END
+TPreparedStatementFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TPreparedStatementFactory.php
+END
+IMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/IMappedStatement.php
+END
+TInsertMappedStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TInsertMappedStatement.php
+END
+TCachingStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TCachingStatement.php
+END
+TPreparedCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Statements/TPreparedCommand.php
+END

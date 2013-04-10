@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/core/Gettext
+END
+MO.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/core/Gettext/MO.php
+END
+PO.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/core/Gettext/PO.php
+END
+TGettext.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/core/Gettext/TGettext.php
+END

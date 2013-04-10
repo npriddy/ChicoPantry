@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Mysql
+END
+TMysqlMetaData.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Mysql/TMysqlMetaData.php
+END
+TMysqlTableInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Mysql/TMysqlTableInfo.php
+END
+TMysqlCommandBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Mysql/TMysqlCommandBuilder.php
+END
+TMysqlTableColumn.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Mysql/TMysqlTableColumn.php
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections
+END
+TStack.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TStack.php
+END
+TDummyDataSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TDummyDataSource.php
+END
+TList.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TList.php
+END
+TPagedDataSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TPagedDataSource.php
+END
+TPagedList.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TPagedList.php
+END
+TMap.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TMap.php
+END
+TAttributeCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TAttributeCollection.php
+END
+TQueue.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/3/trunk/framework/Collections/TQueue.php
+END

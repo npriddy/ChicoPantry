@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util
+END
+TVarDumper.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TVarDumper.php
+END
+TParameterModule.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TParameterModule.php
+END
+TSimpleDateFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TSimpleDateFormatter.php
+END
+TLogger.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TLogger.php
+END
+TDataFieldAccessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TDataFieldAccessor.php
+END
+TDateTimeStamp.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TDateTimeStamp.php
+END
+TLogRouter.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/6/trunk/framework/Util/TLogRouter.php
+END

@@ -1,0 +1,148 @@
+<%@ Title="Recipe" %>
+<!--
+  Module: RecipeView.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Displays recipe information / allows users to comment on the recipes/
+ * and print recipes.
+ -->
+
+<com:TContent  ID="Main">
+    <table width="100%">
+        <tr>
+            <td>
+        <com:THyperLink
+            ID="hypEdit"
+            Text="Edit"
+            Visible="<%= $this->User->IsAdmin %>" />
+        </td>
+        <td>
+            <div align="right">
+                <com:TCustomValidator ControlToValidate="ddlGroceryList" ErrorMessage="*Recipe Already In This List." Display="Dynamic" OnServerValidate="validateList" ValidationGroup="AddToList"/>
+                <com:TDropDownList ID='ddlGroceryList' Width='200px' Visible="<%= !$this->User->IsGuest %>" ValidationGroup="AddToList"/>
+                <com:TButton ID="btnGroceryList" Text="Add To List" OnClick='GroceryList_Clicked' Visible="<%= !$this->User->IsGuest %>" ValidationGroup="AddToList" />
+                <com:TButton Text="Print" ID="btnPrint" Width="75px" Attributes.OnClick="PrintContent();"></com:TButton>
+            </div>
+        </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function PrintContent()
+        {
+        var DocumentContainer = document.getElementById('divtoprint');
+        var WindowObject = window.open('', 'PrintWindow','width=750,height=650,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes');
+        WindowObject.document.writeln(DocumentContainer.innerHTML);
+        WindowObject.document.close();
+        WindowObject.focus();
+        WindowObject.print();
+        WindowObject.close();
+        }
+    </script>
+    <com:TPanel GroupingText="Info">
+        <div id='divtoprint'>
+            <table width="100%">
+                <tr>
+                    <td width="400px">
+            <table>
+                <tr>
+                    <td colspan="2"><com:TLabel ID="lblRecipeName" Style="font-weight:bold"></com:TLabel></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                <com:TLabel ID="lblRecipeCategories"></com:TLabel>
+                </td>
+                </tr>
+                <tr>
+                    <td><com:TLabel ID="lblAuthorText" Text="Author" ></com:TLabel></td>
+                <td><com:TLabel ID="lblAuthor"  ></com:TLabel></td>
+                </tr>
+                <tr>
+                    <td><com:TLabel Text="Prep Time:"></com:TLabel></td>
+                <td><com:TLabel ID="lblPrepTime"></com:TLabel></td>
+                </tr>
+                <tr>
+                    <td><com:TLabel Text="Cook Time:"></com:TLabel></td>
+                <td><com:TLabel ID="lblCookTime"></com:TLabel></td>
+                </tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+            </table>
+        </td>
+            <td width="400px"><div align="right">
+                <com:TImage Id="imgRecipe" Width="200px" Height="200px" /></div>
+            </td>
+        </tr>
+        </table>
+            <com:TPanel GroupingText="Ingredients" Width="100%">
+                <com:TDataGrid  ID="IngredientRecipeGrid"
+                                CellPadding="2"
+                                DataKeyField="RI_ID"
+                                Width="100%"
+                                PagerStyle.Mode="Numeric"
+                                PagerStyle.HorizontalAlign="Right"
+                                AutoGenerateColumns="false"
+                                HeaderStyle.BackColor="#BF2527"
+                                HeaderStyle.ForeColor="white"
+                                AlternatingItemStyle.BackColor="#EDD9A4"
+                                ItemStyle.BackColor="#FDF088"
+                                ItemStyle.Font.Italic="true">
+                    <com:TBoundColumn
+                        HeaderText="RI_ID"
+                        DataField="RI_ID"
+                        Visible="false"/>
+                    <com:TBoundColumn
+                        HeaderText=""
+                        DataField="Amount"/>
+                    <com:TBoundColumn
+                        SortExpression="Name"
+                        HeaderText="Measure"
+                        DataField="Name"/>
+                    <com:TBoundColumn
+                        SortExpression="Ingredient_Name"
+                        HeaderText="Name"
+                        DataField="Ingredient_Name" />
+                </com:TDataGrid>
+            </com:TPanel>
+            <com:TPanel GroupingText="Directions">
+                <com:TLiteral ID="litDirections"/>
+            </com:TPanel>
+
+    </com:TPanel>
+
+    <com:TPanel GroupingText="Comments">
+             <com:THtmlArea ID="htmlComments" Height="100px" EnableCompression="false" Width="100%" Visible="<%= !$this->User->IsGuest %>" />
+              <com:TButton ID="btnSubmit" Text="Submit" OnClick='Submit_Clicked' Visible="<%= !$this->User->IsGuest %>" />
+                <com:TDataGrid  ID="CommentsGrid"
+                                CellPadding="2"
+                                DataKeyField="RCO_ID"
+                                Width="100%"
+                                PagerStyle.Mode="Numeric"
+                                PagerStyle.HorizontalAlign="Right"
+                                AutoGenerateColumns="false"
+                                HeaderStyle.BackColor="#BF2527"
+                                HeaderStyle.ForeColor="white"
+                                AlternatingItemStyle.BackColor="#EDD9A4"
+                                ItemStyle.BackColor="#FDF088"
+                                OnDeleteCommand="deleteComment"
+                                ItemStyle.Font.Italic="true">
+                    <com:TBoundColumn
+                        HeaderText="RCO_ID"
+                        DataField="RCO_ID"
+                        Visible="false"/>
+                    <com:TBoundColumn
+                        HeaderText=""
+                        DataField="Comment"/>
+                    <com:TBoundColumn
+                        DataField="Username"/>
+                      <com:TButtonColumn
+                    Text="Delete"
+                    ButtonType="PushButton"
+                    Visible="<%= $this->User->IsAdmin %>"
+                    CommandName="delete" />
+                </com:TDataGrid>
+    </com:TPanel>
+</div>
+</com:TContent>

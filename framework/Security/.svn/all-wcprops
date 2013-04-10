@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security
+END
+TAuthorizationRule.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TAuthorizationRule.php
+END
+TUserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TUserManager.php
+END
+TAuthManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TAuthManager.php
+END
+IUserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/IUserManager.php
+END
+TUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TUser.php
+END
+TDbUserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TDbUserManager.php
+END
+TSecurityManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Security/TSecurityManager.php
+END

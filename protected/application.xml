@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application id="chicopantry" mode="Debug">
+    <paths>
+         <!-- Tells Pradosoft that there are valid php classes to refrence in these folders -->
+        <using namespace="Application.database.*" />
+        <using namespace="System.Data.ActiveRecord.*" />
+        <using namespace="Application.common.*" />
+    </paths>
+    <!-- Parameters for database connection string -->
+    
+    <!-- configurations for modules -->
+    <modules>
+      
+         <!-- Activates Active records using our databse -->
+        <module class="System.Data.ActiveRecord.TActiveRecordConfig" ConnectionID="db" />
+        <!-- Sets the authentication manager and the login page settings -->
+        <module id="auth" class="System.Security.TAuthManager" UserManager="users" LoginPage="Login" />
+        <!-- Sets the user manager to be the PantryUser for the current user -->
+        <module id="users" class="System.Security.TDbUserManager" UserClass="Application.common.PantryUser" />
+        <!-- References the data module -->
+        <module id="data" class="Application.common.ChicoPantryDataModule" />
+        <!-- Associates the error handler with the site -->
+        <module class="Application.common.ChicoPantryErrorHandler" />
+        <!-- Allows pradosoft to insert rows into the MyLog.log file -->
+        <module id="log" class="System.Util.TLogRouter">
+            <route class="TBrowserLogRoute"
+              Levels="Info"
+              Categories="System.Web.UI.TPage, System.Web.UI.WebControls" />
+            <route class="TFileLogRoute" LogPath="Application.logs" LogFile="MyLog.log" Categories="MyCategory" />
+        </module>
+    </modules>
+  <!-- Sets the homepage to be Home.php and the layout to main -->
+    <services>
+        <service id="page" class="TPageService" DefaultPage="Home">
+            <pages MasterClass="Application.layouts.MainLayout" Theme="main"  />
+        </service>
+    </services>
+</application>

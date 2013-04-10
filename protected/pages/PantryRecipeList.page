@@ -1,0 +1,63 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: PantryRecipeList.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Page that lists what recipes where generated from their pantry.
+ -->
+
+<com:TContent ID="Main">  
+<script type="text/javascript">
+function PrintContent()
+{
+var DocumentContainer = document.getElementById('divtoprint');
+var WindowObject = window.open('', 'PrintWindow','width=750,height=650,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes');
+WindowObject.document.writeln(DocumentContainer.innerHTML);
+WindowObject.document.close();
+WindowObject.focus();
+WindowObject.print();
+WindowObject.close();
+}
+</script>
+<div id='divtoprint'>
+  <h2>Pantry Possibilities</h2>
+  <div align="right" width="100%"><com:TButton ID="btnPrint" Text="Print" Attributes.OnClick="PrintContent();"/></div>
+       <com:TDataGrid  ID="RecipeGrid"
+                    CellPadding="2"
+                    Width="100%"
+                    DataKeyField="RI_ID"
+                    AutoGenerateColumns="false"
+                    HeaderStyle.BackColor="#BF2527"
+                    HeaderStyle.ForeColor="white"
+                    AlternatingItemStyle.BackColor="#EDD9A4"
+                    ItemStyle.BackColor="#FDF088"
+                    ItemStyle.Font.Italic="true"
+                    AllowSorting="true"
+                    OnSortCommand="sortDataGrid">
+        <com:TBoundColumn
+            HeaderText="RI_ID"
+            DataField="RI_ID"
+            Visible="false"
+            />
+        <com:THyperLinkColumn
+            DataTextField="R_Name"
+            DataNavigateUrlField="RI_ID">
+            <prop:DataNavigateUrlFormatString>#
+                $this->Service->constructUrl('RecipeView',array('RI_ID'=>{0}))
+            </prop:DataNavigateUrlFormatString>
+        </com:THyperLinkColumn>
+        <com:TBoundColumn
+            SortExpression="R_name"
+            HeaderText="Name"
+            DataField="R_name"
+            Visible="False"
+            />
+        <com:TBoundColumn
+            HeaderText="Cook Time"
+            DataField="Cook_Time"/>
+        <com:TBoundColumn
+            HeaderText="Author"
+            DataField="username"/>
+    </com:TDataGrid>
+	</div>
+</com:TContent>

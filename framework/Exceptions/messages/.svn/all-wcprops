@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/3/trunk/framework/Exceptions/messages
+END
+messages-id.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CSCI430/!svn/ver/3/trunk/framework/Exceptions/messages/messages-id.txt
+END
+messages-zh.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CSCI430/!svn/ver/3/trunk/framework/Exceptions/messages/messages-zh.txt
+END
+messages.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CSCI430/!svn/ver/3/trunk/framework/Exceptions/messages/messages.txt
+END
+messages-fr.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/CSCI430/!svn/ver/3/trunk/framework/Exceptions/messages/messages-fr.txt
+END

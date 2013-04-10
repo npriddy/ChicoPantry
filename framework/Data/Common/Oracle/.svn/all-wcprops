@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Oracle
+END
+TOracleMetaData.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Oracle/TOracleMetaData.php
+END
+TOracleTableInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Oracle/TOracleTableInfo.php
+END
+TOracleCommandBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Oracle/TOracleCommandBuilder.php
+END
+TOracleTableColumn.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Oracle/TOracleTableColumn.php
+END

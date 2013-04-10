@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching
+END
+TSqliteCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TSqliteCache.php
+END
+TAPCCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TAPCCache.php
+END
+TDbCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TDbCache.php
+END
+TXCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TXCache.php
+END
+TMemCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TMemCache.php
+END
+TCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CSCI430/!svn/ver/3/trunk/framework/Caching/TCache.php
+END

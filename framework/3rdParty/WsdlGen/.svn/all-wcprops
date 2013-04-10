@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/WsdlGen
+END
+Wsdl.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/WsdlGen/Wsdl.php
+END
+WsdlOperation.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/WsdlGen/WsdlOperation.php
+END
+WsdlMessage.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/WsdlGen/WsdlMessage.php
+END
+WsdlGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/WsdlGen/WsdlGenerator.php
+END

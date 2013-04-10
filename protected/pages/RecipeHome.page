@@ -1,0 +1,84 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: RecipeHome.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Used for displaying all recipes in the database and allows users to
+ * search for recipes by category
+ -->
+
+<com:TContent ID="Main">
+    <h2>Recipe Home</h2>
+ <com:TLabel ID="lblMessage" Visible="false"></com:TLabel> <br />
+	<com:THyperLink
+        ID="hypEdit"
+        Text="Create New Recipe"
+	    NavigateUrl="?page=RecipeNew" %>
+		Visible="<%= $this->User->IsAdmin %>"	   />
+<com:TPanel GroupingText="Search" Width="100%">
+    <table>
+        <tr>
+           <td><com:TTextBox ID="txtName" Width="200px"/><com:TRequiredFieldValidator ID="valName" ControlToValidate="txtName" ErrorMessage="*" Display="Dynamic" ValidationGroup="search"/> </td>
+            <td> <com:TDropDownList ID="ddlRecipeCategory" DataValueField="R_Category_ID"
+ Width="200px">
+                <com:TListItem Value="value 1" Text="item 1" Selected="true" /></com:TDropDownList>
+
+            </td>
+     <td><com:TButton ID="btnSearch" Text="Search" OnClick="Search_Clicked"  ValidationGroup="search"/></td>
+     </tr>
+     <tr>
+        <td style="font-size:10px;"><i>Only know the category? Try our wild card -- </i><b>*</b></td>
+      </tr>
+    </table>
+</com:TPanel>
+    <com:TDataGrid  ID="RecipeGrid"
+                    CellPadding="2"
+                    Width="100%"
+                    DataKeyField="RI_ID"
+                  
+                    AutoGenerateColumns="false"
+                    HeaderStyle.BackColor="#BF2527"
+                    HeaderStyle.ForeColor="white"
+                    AlternatingItemStyle.BackColor="#EDD9A4"
+                    ItemStyle.BackColor="#FDF088"
+                    ItemStyle.Font.Italic="true"
+                    AllowSorting="true"
+                    OnItemDataBound="itemDataBound"
+                    OnSortCommand="sortDataGrid">
+        <com:TBoundColumn
+
+            HeaderText="RI_ID"
+            DataField="RI_ID"
+            Visible="false"
+            />
+          <com:TTemplateColumn ID="imageColumn"  ItemStyle.Width="100px">
+                <prop:ItemTemplate>
+                    <center> <com:TImage ID="imgRecipe" Width="100px"  ></com:TImage></center>
+                </prop:ItemTemplate>
+              </com:TTemplateColumn>
+        <com:THyperLinkColumn
+            DataTextField="R_name"
+            DataNavigateUrlField="RI_ID">
+            <prop:DataNavigateUrlFormatString>#
+                $this->Service->constructUrl('RecipeView',array('RI_ID'=>{0}))
+            </prop:DataNavigateUrlFormatString>
+        </com:THyperLinkColumn>
+        <com:TBoundColumn
+            SortExpression="R_name"
+            HeaderText="Name"
+            DataField="R_name"
+            Visible="False"
+            />
+        <com:TBoundColumn
+            HeaderText="Cook Time"
+            DataField="Cook_Time"/>
+        <com:TBoundColumn
+            HeaderText="Author"
+            DataField="username"/>
+        <com:TBoundColumn
+            ID="imageUrlColumn"
+            DataField="ImageUrl"
+            Visible="false"
+            />
+    </com:TDataGrid>
+</com:TContent>

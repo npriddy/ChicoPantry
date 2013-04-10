@@ -1,0 +1,207 @@
+<%@ Title="ChicoPantry.com" %>
+<!--*
+  Module: MyGroceryListHome.php
+  Author Name(s): Ashley Prasad
+  Date Created: 12/7/2010
+  Purpose: Allows users to create Grocery Lists, delete whole Grocery Lists,
+ *        manipulate Recipes between lists: copy/cut, or simply delete out
+ *        recipes they no longer want in list. Generate allows users to see
+ *        what needs to be on their shopping lists for selected Grocery Lists.
+ *
+ *-->
+<com:TContent ID="Main">
+    <h2>My Grocery List</h2>
+    <!-- shows only the demo page if the user isn't logged and links to the login page. -->
+    <com:TPanel ID="pnlDemo"  >
+    <table width="90%" align="center" cellpadding="10px">
+        <td>
+        <a href="<%= $this->Service->constructUrl('Login') %>"> <com:TImage Id="grocery" ImageUrl="images/groceryListDemo.jpg" Width="400px" /> </a>
+        </td>
+        <td><H2>Want to make the most of ChicoPantry.com?</H2>
+        <p>Try our Grocery List Utility all you need is an account and a little imagination.
+            So Login or Sign Up to create personalized grocery lists filled with your favorite recipes!
+        </p>
+        </td>
+    </table>
+    </com:TPanel>
+    <!--add new list-->
+    <com:TPanel ID="pnlMyAccount" Width="100%" Visible="false">
+        <p><table width="100%">
+            <tr>
+                <td>Enter a new grocery list name and click "Add".</td>
+            <tr>
+            <td><com:TTextBox ID="txtNewListName" Width="150px" ValidationGroup="NewList" Maxlength="150" />
+            <com:TButton ID="btnAddRecipeList" Text="Add" onClick="btnAddList_Clicked" ValidationGroup="NewList" />
+            <com:TRequiredFieldValidator ControlToValidate="txtNewListName" Display="Dynamic" ErrorMessage="Please enter a list name." ControlCssClass="required-field" ValidationGroup="NewList" />
+        </td>
+        <!--generate shopping list-->
+        <td align="right"><com:TButton ID="btnGenerate" Text="Generate Shopping List" OnClick="Generate_Clicked"/></td></tr></table>
+
+<!--display lists-->
+<com:TDataGrid ID="RecipeUserListGrid"
+               CellPadding="2"
+               DataKeyField="List_ID"
+               Width="100%"
+               AutoGenerateColumns="false"
+               HeaderStyle.BackColor="#BF2527"
+               HeaderStyle.ForeColor="white"
+               AlternatingItemStyle.BackColor="#EDD9A4"
+               ItemStyle.BackColor="#FDF088"
+               ItemStyle.Font.Italic="true"
+               OnItemDataBound="itemDataBound"
+               OnEditCommand="editRecipeListClicked"
+               OnUpdateCommand="saveRecipeListItem"
+               OnCancelCommand="cancelRecListItem"
+               OnDeleteCommand="btnRemoveList_Clicked"
+               OnItemCommand="radioButtonClicked"
+               >
+
+    <com:TBoundColumn
+        ID="recipeListIdColumn"
+        HeaderText="List_ID"
+        DataField="List_ID"
+        Visible="false"
+        />
+    <com:TTemplateColumn 
+        ID="selectColumnButton"
+        ItemStyle.Width="50px">
+        <prop:ItemTemplate>
+            <com:TButton ID="btnSelect" Text="View">
+            </com:TButton>
+        </prop:ItemTemplate>
+    </com:TTemplateColumn>
+
+    <com:TTemplateColumn 
+        ID="selectColumn"
+        ItemStyle.Width="20px">
+        <prop:ItemTemplate>
+            <com:TRadioButton ID="rb_Select" AutoPostBack="false" Enabled="false" GroupName="rbSelectGroup">
+            </com:TRadioButton>
+        </prop:ItemTemplate>
+    </com:TTemplateColumn>
+
+    <com:TEditCommandColumn  ValidationGroup="UpdateList">
+    </com:TEditCommandColumn>
+
+    <com:TTemplateColumn 
+        ID="L_NameColumn"
+        HeaderText="Grocery List"
+        >
+        <prop:ItemTemplate>
+            <%#$this->Parent->DataItem['L_Name']%>
+        </prop:ItemTemplate>
+        <prop:EditItemTemplate>
+
+            <com:TTextBox ID="txtL_Name" Text="<%#$this->Parent->DataItem['L_Name']%>" Width="150px" ValidationGroup="UpdateList" > </com:TTextBox>
+            <com:TRequiredFieldValidator ControlToValidate="txtL_Name" Display="Dynamic" ErrorMessage="*" ControlCssClass="required-field" ValidationGroup="UpdateList" />
+
+        </prop:EditItemTemplate>
+    </com:TTemplateColumn>
+
+    <com:TBoundColumn
+        HeaderText="Meal List Name"
+        DataField="L_Name"
+        Visible="False"
+        />
+
+    <com:TButtonColumn
+        ItemStyle.Width="50px"
+        Text="Delete"
+        ButtonType="PushButton"
+        CommandName="delete"
+        ValidationGroup="UpdateList"
+        />
+
+</com:TDataGrid>
+</p>
+<p>Adjust recipes currently in your list<br />
+<com:TRadioButton
+    ID="copyButton"
+    Text="Copy"
+    GroupName="updateRecipeList"
+    Checked="true"
+    />
+<com:TRadioButton
+    ID="cutButton"
+    Text="Move"
+    GroupName="updateRecipeList"
+    />
+ <i> to </i>
+<com:TDropDownList ID="ddlUserRecipeList" Width="150px" AutoPostBack="false"></com:TDropDownList>
+<com:TLabel ID="lblAlreadyExists" Visible="false" Style="color:red" Text="*Recipe Already Exists In This List"/>
+</p>
+<com:TDataGrid  ID="RecipeMealListGrid"
+                CellPadding="2"
+                DataKeyField="RL_ID"
+                Width="100%"
+                AutoGenerateColumns="false"
+                HeaderStyle.BackColor="#BF2527"
+                HeaderStyle.ForeColor="white"
+                AlternatingItemStyle.BackColor="#EDD9A4"
+                ItemStyle.BackColor="#FDF088"
+                ItemStyle.Font.Italic="true"
+                OnDeleteCommand="deleteRecipefromListClicked"
+                OnUpdateCommand="updateRecipeList"
+
+                >
+    <com:TBoundColumn
+        HeaderText="Recipe ID"
+        DataField="RI_ID"
+        Visible="false"
+        />
+
+    <com:TBoundColumn
+        HeaderText="Recipe_List_ID"
+        DataField="RL_ID"
+        Visible="false"
+        />
+
+    <com:TButtonColumn ID="selectedRecipeColumn"
+                       ItemStyle.Width="50px"
+                       Text="Select"
+                       ButtonType="PushButton"
+                       CommandName="update"
+                       ValidationGroup="UpdateList2"
+                       />
+
+    <com:TTemplateColumn 
+    ID="recipeSelectColumn"
+    ItemStyle.Width="20px">
+        <prop:ItemTemplate>
+            <com:TRadioButton ID="recipe_rb_Select" AutoPostBack="false" Enabled="false" GroupName="RL_radioBtn">
+            </com:TRadioButton>
+        </prop:ItemTemplate>
+    </com:TTemplateColumn>
+
+
+    <com:THyperLinkColumn
+        HeaderText="Recipe Name"
+        DataTextField="R_Name"
+        DataNavigateUrlField="RI_ID"
+        >
+        <prop:DataNavigateUrlFormatString>#
+            $this->Service->constructUrl('RecipeView',array('RI_ID'=>{0}))
+        </prop:DataNavigateUrlFormatString>
+    </com:THyperLinkColumn>
+
+    <com:TBoundColumn
+        HeaderText="Recipe Name"
+        DataField="R_Name"
+        Visible="False"/>
+
+    <com:TBoundColumn
+        HeaderText="Author"
+        DataField="Username"/>
+
+    <com:TButtonColumn
+        Text="Delete"
+        ButtonType="PushButton"
+        CommandName="delete"
+        ValidationGroup="UpdateList2"
+        ItemStyle.Width="50px"
+        />
+
+
+</com:TDataGrid>
+</com:TPanel>
+</com:TContent>

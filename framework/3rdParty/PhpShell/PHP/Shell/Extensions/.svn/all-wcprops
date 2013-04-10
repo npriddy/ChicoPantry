@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions
+END
+AutoloadDebug.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/AutoloadDebug.php
+END
+ExecutionTime.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/ExecutionTime.php
+END
+VerbosePrint.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/VerbosePrint.php
+END
+Colour.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/Colour.php
+END
+LoadScript.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/LoadScript.php
+END
+InlineHelp.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/InlineHelp.php
+END
+Autoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/Autoload.php
+END
+Prototypes.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/PhpShell/PHP/Shell/Extensions/Prototypes.php
+END

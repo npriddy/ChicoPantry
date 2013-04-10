@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Sqlite
+END
+TSqliteTableInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Sqlite/TSqliteTableInfo.php
+END
+TSqliteCommandBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Sqlite/TSqliteCommandBuilder.php
+END
+TSqliteTableColumn.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Sqlite/TSqliteTableColumn.php
+END
+TSqliteMetaData.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Sqlite/TSqliteMetaData.php
+END

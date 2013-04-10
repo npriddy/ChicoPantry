@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder
+END
+TMysqlScaffoldInput.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TMysqlScaffoldInput.php
+END
+TPgsqlScaffoldInput.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TPgsqlScaffoldInput.php
+END
+TIbmScaffoldInput.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TIbmScaffoldInput.php
+END
+TScaffoldInputCommon.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TScaffoldInputCommon.php
+END
+TScaffoldInputBase.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TScaffoldInputBase.php
+END
+TMssqlScaffoldInput.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TMssqlScaffoldInput.php
+END
+TSqliteScaffoldInput.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/InputBuilder/TSqliteScaffoldInput.php
+END

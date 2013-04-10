@@ -1,0 +1,61 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: Home.php
+  Author Name(s): Nate Priddy, Vicky Holcomb, Ashley Prasad
+  Date Created: 12/7/2010
+  Purpose: Home landing page.
+ -->
+
+
+<com:TContent ID="Main">
+    <com:TLabel ID="lblMessage" Visible="false"></com:TLabel>
+<com:TPanel GroupingText="Search For Recipes" Width="100%">
+<!--create a table to hold the pics with links to corresponding pages-->
+<table border="0" cellpadding="10">
+<tr>
+    <td>
+        <!-- links to recipe home page-->
+        <a href="<%= $this->Service->constructUrl('RecipeHome') %>"> <com:TImage Id="food" Width="300px" ImageUrl="images/foodpic.jpg" /> </a>
+    </td>
+    <td>
+        <a href="<%= $this->Service->constructUrl('RecipeHome') %>">Search</a> our extensive database for recipes by name, category and more!
+    </td>
+</tr>
+<tr>
+</tr>
+</table>
+</com:TPanel>
+
+<com:TPanel GroupingText="Generate Shopping Lists" Width="100%">
+<table border="0" cellpadding="10">
+<tr>
+    <td>
+        <!-- links to my grocery list home page-->
+        <a href="<%= $this->Service->constructUrl('MyGroceryListHome') %>"><com:TImage Id="grocery" Width="300px" ImageUrl="images/GroceryList.jpg" /> </a>
+    </td>
+    <td>
+        Found recipes that you like?  Use our <a href="<%= $this->Service->constructUrl('PantryHome') %>">shopping list generator</a> to create a checklist to take with you to the grocery store.
+    </td>
+</tr>
+<tr>
+</tr>
+</table>
+
+</com:TPanel>
+
+<com:TPanel GroupingText="Mantain Your Pantry!" Width="100%">
+<table border="0" cellpadding="10">
+<tr>
+    <td>
+        <!-- links to pantry home page-->
+        <a href="<%= $this->Service->constructUrl('PantryHome') %>"><com:TImage Id="pantry" Width="300px" ImageUrl="images/PantryImg.jpg" /> </a>
+    </td>
+    <td>
+        <a href="<%= $this->Service->constructUrl('MyGroceryListHome') %>">Add</a> the items in your cupboard and refrigerator and let us find thousands of new recipes for you to try with the ingredients you already have!
+    </td>
+</tr>
+<tr>
+</tr>
+</table>
+</com:TPanel>
+</com:TContent> 

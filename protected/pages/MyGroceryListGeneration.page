@@ -1,0 +1,53 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: MyGroceryListGeneration.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Displays the list of ingredients based on what is in the users pantry
+ -->
+
+<com:TContent ID="Main">
+<script type="text/javascript">
+function PrintContent()
+{
+var DocumentContainer = document.getElementById('divtoprint');
+var WindowObject = window.open('', 'PrintWindow','width=750,height=650,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes');
+WindowObject.document.writeln(DocumentContainer.innerHTML);
+WindowObject.document.close();
+WindowObject.focus();
+WindowObject.print();
+WindowObject.close();
+}
+</script>
+<div id='divtoprint'>
+    <h2><com:TLabel ID="lblListName" /></h2>
+	<div align="right" width="100%"><com:TButton ID="btnPrint" Text="Print" Attributes.OnClick="PrintContent();"/></div>
+        <com:TPanel  Width="100%">
+		
+             <com:TDataGrid Width="100%"  ID="GroceryList"
+                        CellPadding="2"
+                        DataKeyField="Pantry_ID"
+                        AutoGenerateColumns="false"
+                         HeaderStyle.BackColor="#BF2527"
+                    HeaderStyle.ForeColor="white"
+                    AlternatingItemStyle.BackColor="#EDD9A4"
+                    ItemStyle.BackColor="#FDF088"
+                        ItemStyle.Font.Italic="true">
+              <com:TTemplateColumn ID="AmountColumnDDL">
+                    <prop:ItemTemplate>
+                     <center>
+                    <com:TCheckBox ID="chkBox" Enabled="False" />
+                    </center>
+                    </prop:ItemTemplate>
+                </com:TTemplateColumn>
+            <com:TBoundColumn
+                HeaderText="Ingredient"
+                DataField="Ingredient_Name"
+                />
+            <com:TBoundColumn
+                HeaderText="Category"
+                DataField="IC_Name"/>
+        </com:TDataGrid>
+        </com:TPanel>
+	</div>
+</com:TContent>

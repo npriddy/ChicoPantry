@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold
+END
+TScaffoldSearch.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldSearch.php
+END
+TScaffoldListView.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldListView.php
+END
+TScaffoldEditView.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldEditView.tpl
+END
+TScaffoldBase.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldBase.php
+END
+TScaffoldView.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldView.php
+END
+style.css
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/style.css
+END
+TScaffoldSearch.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldSearch.tpl
+END
+TScaffoldListView.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldListView.tpl
+END
+TScaffoldEditView.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldEditView.php
+END
+TScaffoldView.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Scaffold/TScaffoldView.tpl
+END

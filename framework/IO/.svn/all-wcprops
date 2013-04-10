@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/CSCI430/!svn/ver/6/trunk/framework/IO
+END
+TTextWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CSCI430/!svn/ver/6/trunk/framework/IO/TTextWriter.php
+END
+TTarFileExtractor.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CSCI430/!svn/ver/6/trunk/framework/IO/TTarFileExtractor.php
+END

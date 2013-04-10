@@ -1,0 +1,151 @@
+<%@ Title="Recipe Edit " %>
+<!--
+  Module: RecipeEdit.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Lets admins edit all the data about the recipe. (Ingredients, category,
+ *  description and title)
+ -->
+
+<com:TContent  ID="Main">
+    <div align="left">
+        <com:TButton Text="Save" ID="btnSave" Width="75px" onClick="btnSave_Clicked" ValidationGroup="Update">
+        </com:TButton>
+    </div>
+    <com:TPanel GroupingText="Info">
+        <table>
+            <tr>
+                <td colspan="2"><com:TTextBox ID="txtRecipeName" Style="font-weight:bold" Width="200px"></com:TTextBox>
+            <com:TRequiredFieldValidator ID="valtxtPassword" ControlToValidate="txtRecipeName" ErrorMessage="*" Display="Dynamic" ValidationGroup="Update"/>
+            <com:TCustomValidator ControlToValidate="txtRecipeName" ErrorMessage="*Recipe Name Already Exists." Display="Dynamic" OnServerValidate="validateRecipeName" ValidationGroup="Update"/>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+            <com:TPanel GroupingText="Categories" Width="100%">
+                <com:TDropDownList ID="ddlRecipeCategoryList" Width="150px" ></com:TDropDownList>
+                <com:TButton ID="btnAddRecipeCategory" Text="Add" onClick="btnAddRecipeCategory_Clicked" />
+                <com:TDataGrid  ID="RecipeCategoryGrid"
+                                CellPadding="2"
+                                DataKeyField="RC_ID"
+                                Width="200px"
+                                AutoGenerateColumns="false"
+                                HeaderStyle.BackColor="#BF2527"
+                                HeaderStyle.ForeColor="white"
+                                AlternatingItemStyle.BackColor="#EDD9A4"
+                                ItemStyle.BackColor="#FDF088"
+                                ItemStyle.Font.Italic="true"
+                                OnDeleteCommand="deleteButtonClicked">
+                    <com:TBoundColumn
+                        DataField="RC_ID"
+                        Visible="False"
+                        />
+                    <com:TBoundColumn
+                        HeaderText="Name"
+                        DataField="RC_Name"/>
+                    <com:TButtonColumn
+                        Text="Delete"
+                        ButtonType="PushButton"
+                        CommandName="delete" />
+
+                </com:TDataGrid>
+            </com:TPanel>
+            </td>
+            </tr>
+            <tr><td>Image Address:</td><td><com:TTextBox ID="txtImageUrl"></com:TTextBox>  </td></tr>
+            <tr>
+                <td><com:TLabel ID="lblAuthorText" Text="Author" ></com:TLabel>
+
+            </td>
+            <td> <com:TLabel ID="lblAuthor" /></td>
+            </tr>
+            <tr>
+                <td><com:TLabel Text="Prep Time:"></com:TLabel></td>
+            <td><com:TTextBox ID="txtPrepTime" Width="25px"></com:TTextBox>&nbsp;Minutes</td>
+            </tr>
+            <tr>
+                <td><com:TLabel Text="Cook Time:"></com:TLabel></td>
+            <td><com:TTextBox ID="txtCookTime" Width="25px"></com:TTextBox>&nbsp;Minutes</td>
+            </tr>
+
+        </table>
+        <com:TPanel GroupingText="Ingredients" Width="100%">
+            <com:TDropDownList ID="ddlRecipeIngredientList" Width="180px" ></com:TDropDownList>
+            <com:TTextbox ID="txtAmount" Width="20px"></com:TTextbox>
+            <com:TRequiredFieldValidator ID="valtxtAmount" ControlToValidate="txtAmount" ErrorMessage="*" Display="Dynamic" ValidationGroup="RecipeIngredient"/>
+            <com:TDropDownList ID="ddlMeasure"></com:TDropDownList>
+            <com:TButton ID="btnAddRecipeIngredient" Text="Add" onClick="btnAddIngredient_Clicked" ValidationGroup="RecipeIngredient" />
+            <com:TDataGrid  ID="IngredientRecipeGrid"
+                            CellPadding="2"
+                            DataKeyField="RI_ID"
+                            Width="100%"
+                            PagerStyle.Mode="Numeric"
+                            PagerStyle.HorizontalAlign="Right"
+                            AutoGenerateColumns="false"
+                            HeaderStyle.BackColor="#BF2527"
+                            HeaderStyle.ForeColor="white"
+                            AlternatingItemStyle.BackColor="#EDD9A4"
+                            ItemStyle.BackColor="#FDF088"
+                            ItemStyle.Font.Italic="true"
+                            OnEditCommand="editRecIngredientItem"
+                            OnCancelCommand="cancelRecIngredientItem"
+                            OnItemCreated="itemRecIngredientCreated"
+                            OnDeleteCommand="deleteRecIngredientButtonClicked"
+                            OnUpdateCommand="saveRecipeIngredientItem">
+                <com:TEditCommandColumn></com:TEditCommandColumn>
+                <com:TBoundColumn
+                    ID="RI_ID"
+                    HeaderText="RI_ID"
+                    DataField="RI_ID"
+                    Visible="false"/>
+                <com:TTemplateColumn ID="AmountColumnDDL">
+                    <prop:ItemTemplate>
+                        <%#$this->Parent->DataItem['Amount']%>
+                    </prop:ItemTemplate>
+                    <prop:EditItemTemplate>
+                        <com:TTextBox ID="txtAmount" Text="<%#$this->Parent->DataItem['Amount']%>" Width="50px"> </com:TTextBox>
+                    </prop:EditItemTemplate>
+                </com:TTemplateColumn>
+                <com:TTemplateColumn ID="measureColumnDDL">
+                    <prop:HeaderTemplate>
+                        Measure
+                    </prop:HeaderTemplate>
+                    <prop:ItemTemplate>
+                        <%#$this->Parent->DataItem['Name']%>
+                    </prop:ItemTemplate>
+                    <prop:EditItemTemplate>
+                        <com:TDropDownList ID="ddlMeasure">
+                        </com:TDropDownList>
+                    </prop:EditItemTemplate>
+                </com:TTemplateColumn>
+                <com:TBoundColumn
+                    DataField="Ingredient_ID"
+                    Visible="False">
+                </com:TBoundColumn>
+                <com:TBoundColumn
+                    DataField="Measure_ID"
+                    Visible="False">
+                </com:TBoundColumn>
+                <com:TTemplateColumn ID="ingredientNameColumnDDL">
+                    <prop:HeaderTemplate>
+                        Name
+                    </prop:HeaderTemplate>
+                    <prop:ItemTemplate>
+                        <%#$this->Parent->DataItem['Ingredient_Name']%>
+                    </prop:ItemTemplate>
+                    <prop:EditItemTemplate>
+                        <com:TDropDownList ID="ddlIngredientName" Width="100px">
+                        </com:TDropDownList>
+                    </prop:EditItemTemplate>
+                </com:TTemplateColumn>
+                <com:TButtonColumn
+                    Text="Delete"
+                    ButtonType="PushButton"
+                    CommandName="delete" />
+            </com:TDataGrid>
+        </com:TPanel>
+        <com:TPanel GroupingText="Directions">
+            <com:THtmlArea ID="htmlDirections" EnableCompression="false" Width="100%" />
+        </com:TPanel>
+    </com:TPanel>
+</com:TContent>

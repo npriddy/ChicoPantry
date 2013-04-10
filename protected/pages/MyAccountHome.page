@@ -1,0 +1,83 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: MyAccountHome.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Allows users to update their passwords and display their info
+ -->
+
+
+<com:TContent ID="Main">
+    <h2>My Account</h2>
+    <com:TPanel ID="pnlDemo"  >
+    <table width="90%" align="center" cellpadding="10px">
+    <tr>
+        <td>
+        <a href="<%= $this->Service->constructUrl('Login') %>"> <com:TImage Id="grocery" ImageUrl="images/myAccountDemo.jpg" Width="400px" /> </a>
+        </td>
+        <td><H2>Sign up today and see the power of ChicoPantry!</H2>
+        <p>All you need is an account. So sign up or login and see what ChicoPantry can do for you.</p>
+        </td>
+    </tr>
+    </table>
+    </com:TPanel>
+    <com:TPanel ID="pnlMyAccount" Visible="false">
+        <com:TPanel  GroupingText="Info" Width="100%">
+            <table>
+                <tr>
+                    <td>
+                <com:TLabel Text="User Name:"></com:TLabel>
+                </td>
+                <td>
+                <com:TLabel ID="lblUserName"></com:TLabel>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                <com:TLabel Text="Email:"></com:TLabel>
+                </td>
+                <td>
+                <com:TLabel ID="lblEmail"></com:TLabel>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                <com:TLabel Text="Old Password:"></com:TLabel>
+                </td>
+                <td>
+                <com:TTextBox ID="txtOldPassword" TextMode="Password"/>
+                  <com:TCustomValidator ControlToValidate="txtOldPassword" ErrorMessage="*Your entered an invalid password." Display="Dynamic" OnServerValidate="validateOldPassword" ValidationGroup="User"/>
+                <com:TRequiredFieldValidator ControlToValidate="txtOldPassword" Display="Dynamic" ErrorMessage="*Please enter your password (6 or more characters)." ValidationGroup="User" ControlCssClass="required-field" />
+                <com:TRegularExpressionValidator ControlToValidate="txtOldPassword" Display="Dynamic" RegularExpression="\w{6,}" ErrorMessage="*Please enter 6 or more characters." ValidationGroup="User" ControlCssClass="required-field" />
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                <com:TLabel Text="New Password:"></com:TLabel>
+                </td>
+                <td>
+                <com:TTextBox ID="txtNewPassword" TextMode="Password"/>
+                <com:TRequiredFieldValidator ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="*Please enter your password (6 or more characters)." ValidationGroup="User" ControlCssClass="required-field" />
+                <com:TRegularExpressionValidator ControlToValidate="txtNewPassword" Display="Dynamic" RegularExpression="\w{6,}" ErrorMessage="*Please enter 6 or more characters." ValidationGroup="User" ControlCssClass="required-field" />
+                </td>
+                </tr>
+                <tr>
+                    <td width="200px">
+                <com:TLabel Text="Re-enter Password:"></com:TLabel>
+                </td>
+                <td>
+                <com:TTextBox ID="txtRePassword" TextMode="Password"/>
+                <com:TCompareValidator ControlToValidate="txtRePassword" ControlToCompare="txtNewPassword" ErrorMessage="*The Password and Retype Password must match." ValidationGroup="User" ControlCssClass="required-field" />
+                </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><com:TButton ID="btnSave" Text="Save" OnClick="Save_Clicked" ValidationGroup="User"></com:TButton></td>
+                </tr>
+            </table>
+        </com:TPanel>
+        <com:TPanel GroupingText="Recipes Submitted" Visible="false" Width="100%">
+        </com:TPanel>
+    </com:TPanel>
+</com:TContent>

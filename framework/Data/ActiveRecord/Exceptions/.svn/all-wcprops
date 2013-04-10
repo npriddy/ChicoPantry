@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Exceptions
+END
+TActiveRecordException.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Exceptions/TActiveRecordException.php
+END
+messages.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Exceptions/messages.txt
+END

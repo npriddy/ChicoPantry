@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration
+END
+TParameterProperty.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TParameterProperty.php
+END
+TSqlMapXmlConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TSqlMapXmlConfiguration.php
+END
+TDiscriminator.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TDiscriminator.php
+END
+TInlineParameterMapParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TInlineParameterMapParser.php
+END
+TSimpleDynamicParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TSimpleDynamicParser.php
+END
+TResultMap.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TResultMap.php
+END
+TParameterMap.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TParameterMap.php
+END
+TSqlMapCacheModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TSqlMapCacheModel.php
+END
+TSqlMapStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TSqlMapStatement.php
+END
+TResultProperty.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/SqlMap/Configuration/TResultProperty.php
+END

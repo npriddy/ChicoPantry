@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web
+END
+TCacheHttpSession.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/TCacheHttpSession.php
+END
+THttpRequest.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/THttpRequest.php
+END
+TAssetManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/TAssetManager.php
+END
+TUrlManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/TUrlManager.php
+END
+THttpResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/THttpResponse.php
+END
+TUrlMapping.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/TUrlMapping.php
+END
+THttpResponseAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/THttpResponseAdapter.php
+END
+THttpSession.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/THttpSession.php
+END
+THttpUtility.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/THttpUtility.php
+END

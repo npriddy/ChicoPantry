@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations
+END
+TActiveRecordBelongsTo.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordBelongsTo.php
+END
+TActiveRecordHasManyAssociation.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php
+END
+TActiveRecordHasOne.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordHasOne.php
+END
+TActiveRecordRelation.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordRelation.php
+END
+TActiveRecordHasMany.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordHasMany.php
+END
+TActiveRecordRelationContext.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/ActiveRecord/Relations/TActiveRecordRelationContext.php
+END

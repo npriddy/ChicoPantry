@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/schema
+END
+sqlite.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/schema/sqlite.sql
+END
+postgresql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/schema/postgresql.sql
+END
+mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CSCI430/!svn/ver/6/trunk/framework/I18N/schema/mysql.sql
+END

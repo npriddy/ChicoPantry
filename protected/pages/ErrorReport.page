@@ -1,0 +1,24 @@
+<%@ Title="Error" %>
+<!--
+  Module: ErrorReport.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Used for displaying generic error page to use when there are errors.
+ -->
+
+
+<com:TContent ID="Main">
+
+<h2>Error</h2>
+
+<p>
+<com:TLiteral ID="ErrorMessage" />
+</p>
+
+<p>
+Please <a href="mailto:<%$ AdminEmail %>">report to  us</a>
+if you believe this error is caused by our system. Thanks!
+</p>
+
+
+</com:TContent>

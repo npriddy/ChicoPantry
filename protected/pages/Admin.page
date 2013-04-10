@@ -1,0 +1,73 @@
+<%@ Title="Contact Test" %>
+<!--
+  Module: Admin.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Used for debuging process
+ -->
+
+<com:TContent  ID="Main">
+    <com:TTabPanel>
+        <com:TTabView Caption="Ingredients">
+            <com:TDataGrid  ID="IngredientGrid"
+                            Width="100%"
+                            DataKeyField="id"
+                            AutoGenerateColumns="false"
+                            HeaderStyle.BackColor="#BF2527"
+                            HeaderStyle.ForeColor="white"
+                            AlternatingItemStyle.BackColor="#EDD9A4"
+                            ItemStyle.BackColor="#FDF088"
+                            ItemStyle.Font.Italic="true">
+                <com:TEditCommandColumn
+                    HeaderText="Ingredients"
+                    />
+                <com:TBoundColumn
+                    HeaderText="ID"
+                    DataField="Ingredient_ID" />
+                <com:TBoundColumn
+                    SortExpression="Name"
+                    HeaderText="Name"
+                    DataField="Ingredient_Name" />
+                <com:TBoundColumn
+                    HeaderText="CategoryID"
+                    DataField="I_Category_ID"/>
+                <com:TBoundColumn
+                    SortExpression="IC_Name"
+                    HeaderText="Category"
+                    DataField="IC_Name"/>
+            </com:TDataGrid>
+        </com:TTabView>
+        <com:TTabView Caption="Users">
+               <com:TDataGrid  ID="UserGrid"
+                    Width="100%"
+                    DataKeyField="id"
+                    AutoGenerateColumns="False"
+                    HeaderStyle.BackColor="black"
+                    HeaderStyle.ForeColor="white"
+                    ItemStyle.BackColor="#BFCFFF"
+                    ItemStyle.Font.Italic="true"
+                    AlternatingItemStyle.BackColor="#E6ECFF"
+                    OnItemCreated="itemCreated">
+                <com:TBoundColumn
+                    HeaderText="USER_ID"
+                    DataField="USER_ID" />
+                <com:TBoundColumn
+                    HeaderText="Username"
+                    DataField="Username" />
+                <com:TBoundColumn
+                    HeaderText="Email"
+                    DataField="Email"/>
+                <com:TBoundColumn
+                    HeaderText="Password"
+                    DataField="Password"/>
+                <com:TBoundColumn
+                    HeaderText="Passwordsalt"
+                    DataField="Passwordsalt"/>
+                <com:TBoundColumn
+                    ID="Role"
+                    HeaderText="Role"
+                    DataField="Role"/>
+            </com:TDataGrid>
+         </com:TTabView>
+    </com:TTabPanel>
+</com:TContent>

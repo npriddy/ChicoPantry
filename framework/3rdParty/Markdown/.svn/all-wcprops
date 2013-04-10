@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/Markdown
+END
+License.text
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/Markdown/License.text
+END
+MarkdownParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CSCI430/!svn/ver/3/trunk/framework/3rdParty/Markdown/MarkdownParser.php
+END

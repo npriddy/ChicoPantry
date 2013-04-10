@@ -1,0 +1,89 @@
+<%@ Title="ChicoPantry.com" %>
+<!--
+  Module: PantryHome.php
+  Author Name(s): Nate Priddy, Vicky Holcomb
+  Date Created: 12/7/2010
+  Purpose: Allows users to enter ingredients that are in their pantry
+ *         and then generate a list of recipes that use those ingredients.
+ -->
+
+<com:TContent ID="Main">
+  <h2>Pantry Home</h2>
+
+    <com:TPanel ID="pnlDemo">
+        <!-- shows only the demo page if the user isn't logged and links to the login page. -->
+    <table width="90%" align="center" cellpadding="10px">
+    <tr>
+        <td>
+        <a href="<%= $this->Service->constructUrl('Login') %>"> <com:TImage Id="grocery" ImageUrl="images/pantryDemo.jpg" Width="500px" Height="150px" /> </a>
+        </td>
+        <td><H2>Let ChicoPantry.com do the work for you!</H2>
+        <p>Curious about our Pantry Utility? This exciting tool lets you track 
+        whats on your shelves, suggests fun recipes to make using what you
+        already have, and helps you save time and money by knowing what you
+        have where ever you go. Sign up or login to see your Pantry in action!</p>
+        </td>
+    </tr>
+    </table>
+    </com:TPanel>
+    <com:TPanel ID="pnlMyAccount" Visible="false">
+    <!-- some instructional text-->
+    Choose an ingredient to add to your pantry.<br />
+        <!-- drop down list to show ingredients to be able to add to user's pantry -->
+        <table width="100%"><tr><td>
+        <com:TDropDownList ID="ddlRecipeIngredientList" Width="180px" ></com:TDropDownList>
+        <com:TTextBox ID="txtAmount" Width="20px"></com:TTextBox><com:TRequiredFieldValidator ID="valtxtPassword" ControlToValidate="txtAmount" ErrorMessage="*" Display="Dynamic" ValidationGroup="Update"/>
+        <com:TDropDownList ID="ddlMeasure">
+        </com:TDropDownList>
+    <!-- button to add ingredient to pantry -->
+    <com:TButton ID="btnAddRecipeIngredient" Text="Add" onClick="btnAddIngredient_Clicked" Display="Dynamic" ValidationGroup="Update"  /></td><td align="right">
+<!-- generate recipes from ingredients in pantry-->
+<com:TButton ID="btnGeneratePantryList" Text="Generate Recipes" OnClick="generateList_Clicked" Visible="<%= $this->User->Name != 'Guest' %>"/></td></tr>
+<tr>
+<!-- validate ingredients in pantry-->
+<com:TLabel ID="lblAlreadyExists" Visible="false" Style="color:red" Text="*Ingredient Already Exists In Your Pantry."/>
+</tr>
+</table>
+
+
+    <!--grid to display pantry items-->
+    <com:TDataGrid  ID="PantryGrid"
+                        CellPadding="2"
+                        DataKeyField="Pantry_ID"
+                        Width="100%"
+                        AutoGenerateColumns="false"
+                         HeaderStyle.BackColor="#BF2527"
+                        HeaderStyle.ForeColor="white"
+                        AlternatingItemStyle.BackColor="#EDD9A4"
+                        ItemStyle.BackColor="#FDF088"
+                        ItemStyle.Font.Italic="true"
+                        OnDeleteCommand="deleteIngredientButtonClicked">
+            
+            <com:TBoundColumn
+                DataField="Pantry_ID"
+                Visible="False"/>
+            <com:TBoundColumn
+                DataField="User_ID"
+                Visible="False"/>
+            <com:TBoundColumn
+                DataField="Ingredient_ID"
+                Visible="False"/>
+            <com:TBoundColumn
+                HeaderText="Name"
+                DataField="Ingredient_Name"/>
+            <com:TBoundColumn
+                HeaderText="Amount"
+                DataField="Amount"/>
+            <com:TBoundColumn
+                HeaderText="Measure"
+                DataField="Name"/>
+
+            <com:TButtonColumn
+                Text="Delete"
+                ButtonType="PushButton"
+                ItemStyle.Width="50px"
+                CommandName="delete" />
+
+        </com:TDataGrid>
+    </com:TPanel>
+</com:TContent>

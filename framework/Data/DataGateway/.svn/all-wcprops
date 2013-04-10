@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/DataGateway
+END
+TTableGateway.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/DataGateway/TTableGateway.php
+END
+TDataGatewayCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/DataGateway/TDataGatewayCommand.php
+END
+TSqlCriteria.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/DataGateway/TSqlCriteria.php
+END

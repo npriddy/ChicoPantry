@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Pgsql
+END
+TPgsqlMetaData.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Pgsql/TPgsqlMetaData.php
+END
+TPgsqlTableInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Pgsql/TPgsqlTableInfo.php
+END
+TPgsqlCommandBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Pgsql/TPgsqlCommandBuilder.php
+END
+TPgsqlTableColumn.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/CSCI430/!svn/ver/3/trunk/framework/Data/Common/Pgsql/TPgsqlTableColumn.php
+END

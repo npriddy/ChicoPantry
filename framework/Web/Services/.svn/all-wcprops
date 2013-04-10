@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/Services
+END
+TJsonService.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/Services/TJsonService.php
+END
+TPageService.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/Services/TPageService.php
+END
+TSoapService.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/Services/TSoapService.php
+END
+TFeedService.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CSCI430/!svn/ver/6/trunk/framework/Web/Services/TFeedService.php
+END

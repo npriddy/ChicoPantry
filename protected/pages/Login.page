@@ -1,0 +1,68 @@
+<%@ Title="Login" %>
+<!--
+  Module: Login.php
+  Author Name(s): Nate Priddy
+  Date Created: 12/7/2010
+  Purpose: Used for account creation and Users Logging In
+ -->
+
+<com:TContent  ID="Main">
+<table>
+    <tr>
+        <td>
+        <com:TPanel GroupingText="Login" Width="270px">
+            <com:TLabel ForControl="txtUserName" Text="User Name:" />
+            <br />
+            <com:TTextBox ID="txtUserName"/>
+            <com:TRequiredFieldValidator ID="valUserName" ControlToValidate="txtUserName" ErrorMessage="*" Display="Dynamic" ValidationGroup="Login"   />
+            <br />
+            Password:
+            <br />
+            <com:TTextBox ID="txtPassword" TextMode="Password"/>
+            <com:TRequiredFieldValidator ID="valtxtPassword" ControlToValidate="txtPassword" ErrorMessage="*" Display="Dynamic" ValidationGroup="Login"/>
+            <com:TCustomValidator ControlToValidate="txtPassword" ErrorMessage="Your entered an invalid password." Display="Dynamic" OnServerValidate="validateUser" ValidationGroup="Login"/>
+            <br />
+            <br />
+            <com:TButton ID="btnLogin" Text="Login" ValidationGroup="Login" onClick="btnLogin_Clicked" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </com:TPanel>
+        </td>
+        <td>
+        <com:TPanel GroupingText="Create Account" Width="400px">
+            User Name:
+            <br />
+            <com:TTextBox ID="txtNewUserName"/>
+            <com:TRequiredFieldValidator ControlToValidate="txtNewUserName" Display="Dynamic" ErrorMessage="Please enter your username." ControlCssClass="required-field" />
+            <com:TCustomValidator ControlToValidate="txtNewUserName" Display="Dynamic" OnServerValidate="checkUsername" />
+            <com:TRegularExpressionValidator ControlToValidate="txtNewUserName" Display="Dynamic" RegularExpression="\w{6,}" ErrorMessage="Please enter 6 or more characters." ControlCssClass="required-field" />
+            <br />
+            Email:
+            <br />
+            <com:TTextBox ID="txtNewEmail"/>
+            <com:TRequiredFieldValidator ControlToValidate="txtNewEmail" Display="Dynamic" ErrorMessage="Please enter your E-Mail address." ControlCssClass="required-field" />
+            <com:TEmailAddressValidator ControlToValidate="txtNewEmail" Display="Dynamic" ErrorMessage="E-Mail address does not seem to be valid." ControlCssClass="required-field" />
+            <br />
+            Password:
+            <br />
+            <com:TTextBox ID="txtNewPassword" TextMode="Password"/>
+            <com:TRequiredFieldValidator ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="Please enter your password (6 or more characters)." ControlCssClass="required-field" />
+            <com:TRegularExpressionValidator ControlToValidate="txtNewPassword" Display="Dynamic" RegularExpression="\w{6,}" ErrorMessage="Please enter 6 or more characters." ControlCssClass="required-field" />
+            <br />
+            Retype Password:
+            <br />
+            <com:TTextBox ID="txtNewRetypePassword" TextMode="Password"/>
+            <com:TCompareValidator ControlToValidate="txtNewRetypePassword" ControlToCompare="txtNewPassword" ErrorMessage="The Password and Retype Password must match." ControlCssClass="required-field" />
+            <br />
+            <com:TButton ID="btnCreateAccount" Text="Create Account" OnClick="createNewUser" />
+            <br />
+            <br />
+        </com:TPanel>
+        </td>
+    </tr>
+</table>
+</com:TContent>
